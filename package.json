@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Code for namaste-react",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaVericKWareZ/namaste-react-code.git"
+  },
+  "author": "Sarthak Mahapatra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaVericKWareZ/namaste-react-code/issues"
+  },
+  "homepage": "https://github.com/MaVericKWareZ/namaste-react-code#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
