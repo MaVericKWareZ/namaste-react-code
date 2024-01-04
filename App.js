@@ -1,14 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const TitleComponent = () => {
-  return <h1>Namaste React using JSX 🚀</h1>;
-};
+const elem = <span>Hello! </span>;
+const title = (
+  <h1 className="head" tabIndex="5">
+    {elem}
+    Namaste React using JSX 🚀
+  </h1>
+);
 
 const HeadingComponent = () => (
   <div id="container">
+    {title}
     <h1 className="heading">
-      <TitleComponent />
       Namaste React from functional component with no return 🚀
     </h1>
   </div>
