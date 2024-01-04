@@ -3,7 +3,7 @@ node_modules/
 .DS_Store
 yarn.lock
 logs/
-constants/firebaseSecret.json
-constants/service-account-file.json
-cert.pem
-key.pem
+constants/
+dist/
+.parcel-cache/
+
