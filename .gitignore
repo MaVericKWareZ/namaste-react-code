@@ -6,4 +6,5 @@ logs/
 constants/
 dist/
 .parcel-cache/
+example.html
 
