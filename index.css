@@ -81,3 +81,8 @@
     width: 100%;
 }
 
+.filter-container button {
+    margin :10px;
+    cursor: pointer;
+}
+
