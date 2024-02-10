@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Code for namaste-react",
   "scripts": {
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -22,6 +22,7 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "fuzzy-search": "^3.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

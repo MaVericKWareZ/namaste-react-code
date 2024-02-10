@@ -1,15 +1,32 @@
+import { useState } from "react";
 import resList from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import SearchContainer from "./SearchContainer";
-import FilterContainer from "./FitlerContainer";
+import FilterComponent from "./FilterComponent";
 
 const Body = () => {
+  const [listOfRestaurant, setListOfRestaurant] = useState(resList);
+  const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
+
+  const updateFilteredRestaurantList = (filteredList) => {
+    setFilteredRestaurantList(filteredList);
+  };
+
   return (
     <div className="body">
-      <SearchContainer />
-      {/* <FilterContainer /> */}
+      <SearchContainer
+        resData={listOfRestaurant}
+        searchRestaurantList={updateFilteredRestaurantList}
+      />
+      <FilterComponent
+        resData={listOfRestaurant}
+        updateFilteredRestaurantList={updateFilteredRestaurantList}
+      />
       <div className="res-container">
-        {resList.map((res) => (
+        {(filteredRestaurantList.length > 0
+          ? filteredRestaurantList
+          : listOfRestaurant
+        ).map((res) => (
           <RestaurantCard key={res.info.id} resData={res} />
         ))}
       </div>
