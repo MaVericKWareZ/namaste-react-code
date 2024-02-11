@@ -17,7 +17,11 @@ const RestaurantCard = (props) => {
       <img src={resImageUrl}></img>
       <div className="res-detail-container">
         <h3>{name}</h3>
-        <h4>{cuisines.join(",")}</h4>
+        <h4>
+          {cuisines.length > 3
+            ? cuisines.slice(0, 3).join(", ") + "..."
+            : cuisines.join(", ")}
+        </h4>
         <h4>
           {avgRating} stars ({totalRatingsString})
         </h4>

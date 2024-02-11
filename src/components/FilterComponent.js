@@ -4,7 +4,7 @@ const FilterComponent = ({ resData, updateFilteredRestaurantList }) => {
   const [isTopRatedFilterActive, setIsTopRatedFilterActive] = useState(false);
 
   const applyFilter = () => {
-    const filteredList = resData.filter((res) => res.info.avgRating > 4.2);
+    const filteredList = resData.filter((res) => res.info.avgRating > 4.3);
     updateFilteredRestaurantList(filteredList);
     setIsTopRatedFilterActive(true);
   };

@@ -3,7 +3,6 @@
 Git repository for follow along of namaste react series
 
 /*
-
 - Head
   - Logo
   - Nav Item
