@@ -6,10 +6,20 @@
     border-radius: 10px;
 }
 
+.login-button {
+    margin: 10px 20px;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
 .logo {
     width: 200px;
+    height: 200px;
     background: transparent;
     border: none;
+    border-radius: 50%;
 }
 
 .nav-items {
@@ -38,13 +48,17 @@
 .res-card {
     margin: 5px;
     padding: 5px;
-    width: 300px;
+    width: 250px;
     border: #f0f0f0 1px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
 }
 
 .res-card:hover {
     cursor: pointer;
     border: 1px solid black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .res-card img {
@@ -53,6 +67,7 @@
     justify-content: center;
     align-items: center;
     height: 200px;
+    object-fit: cover;
     border: #f0f0f0 1px solid;
 }
 
@@ -91,6 +106,7 @@
 .filter-container button {
     margin :10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .shimmer-container {
