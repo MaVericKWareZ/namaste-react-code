@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LOGO_URL } from "../utils/constants";
 
 const Header = () => {
@@ -7,6 +7,19 @@ const Header = () => {
     const toggleName = loginBtnName === "Login" ? "Logout" : "Login";
     setLoginBtnName(toggleName);
   };
+
+  useEffect(() => {
+    console.log("useEffect called with no dependency");
+  });
+
+  useEffect(() => {
+    console.log("useEffect called with [] array dependency");
+  }, []);
+
+  useEffect(() => {
+    console.log("useEffect called with [loginBtnName] dependency");
+  }, [loginBtnName]);
+
   return (
     <div className="header">
       <div className="logo-container">
