@@ -8,13 +8,13 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import NoRoute from "./components/NoRoute";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="app-container">
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };
@@ -23,15 +23,21 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
     errorElement: <NoRoute />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
   },
 ]);
 
